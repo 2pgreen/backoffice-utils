@@ -1,8 +1,11 @@
 {
   "name": "backoffice-utils",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "main": "lib/index.js",
+  "exports": {
+    "./": "./lib/"
+  },
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build"

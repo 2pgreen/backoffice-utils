@@ -1,5 +1,4 @@
 import Decimal from 'decimal.js';
-import { isNil } from './common';
 
 // Format value to string with specify decimal points
 /**
@@ -24,7 +23,7 @@ export function formatDecimal(
 
 // Format value to 2 decimal point
 /**
- * @param {(number | Decimal)}  amount - An amount in Thai baht.
+ * @param {(number | Decimal)}  amount - An amount in money.
  */
 export function formatMoney(amount: number | Decimal | undefined | null) : string | undefined | null {
   return formatDecimal(2, amount)
@@ -32,7 +31,7 @@ export function formatMoney(amount: number | Decimal | undefined | null) : strin
 
 // Format value to 1 decimal point
 /**
- * @param {(number | Decimal)}  amount - An amount in Thai baht.
+ * @param {(number | Decimal)}  amount - An amount of weight.
  */
 export function formatWeight(amount: number | Decimal | undefined | null) : string | undefined | null {
   return formatDecimal(1, amount)
