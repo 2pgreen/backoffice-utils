@@ -20,3 +20,10 @@ export const filterNullOut = (input : any) => {
         .filter((val: string) => !isNil(input[val]))
     return input
 }
+
+/**
+ * Calculate sum of all numbers
+ * @param {Array<number>}  items - An array of number.
+ */
+export const sum = (items: Array<number>) => items
+    .reduce((acc, curr) => acc + curr, 0)

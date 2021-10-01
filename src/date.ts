@@ -22,3 +22,26 @@ export const Months : Month[] = [
     { no: 11, name: "NOV", thaiFullName: "พฤศจิกายน" },
     { no: 12, name: "DEC", thaiFullName: "ธันวาคม" },
 ]
+
+export function getCurrentYear() : number {
+    return (new Date()).getFullYear()
+}
+
+/**
+ * Start year of this backoffice system
+ */
+export const startYear: number = 2021
+
+/**
+ * Get a list of years from 2021 to present year
+ * @return {number[]}
+ */
+export function getYearList() : Array<number> {
+    const currentYear = getCurrentYear()
+    const numberOfYear = currentYear - startYear + 1
+    const yearList = []
+
+    for(let i = 0; i < numberOfYear; i++)
+        yearList.push(startYear + i)
+    return yearList;
+}
