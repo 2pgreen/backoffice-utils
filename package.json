@@ -1,11 +1,11 @@
 {
   "name": "backoffice-utils",
-  "version": "1.1.00",
+  "version": "1.2.00",
   "description": "",
   "main": "lib/index.js",
   "exports": {
     "./date": "./lib/date.js",
-    "./decimal": "./lib/decimal.js",
+    "./money": "./lib/money.js",
     "./formatter": "./lib/formatter.js",
     "./common": "./lib/common.js",
     "./package.json": "./package.json"
@@ -13,7 +13,7 @@
   "typesVersions": {
     "*": {
       "date": ["lib/date.d.ts"],
-      "decimal": ["lib/decimal.d.ts"],
+      "money": ["lib/decimal.d.ts"],
       "formatter": ["lib/formatter.d.ts"],
       "common": ["lib/common.d.ts"]
     }

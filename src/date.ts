@@ -1,7 +1,7 @@
 interface Month {
     no: number
     name: string
-    thaiFullName: String
+    thaiFullName: string
 }
 
 /**
@@ -44,4 +44,12 @@ export function getYearList() : Array<number> {
     for(let i = 0; i < numberOfYear; i++)
         yearList.push(startYear + i)
     return yearList;
+}
+
+/**
+ * Get a full thai month name from short english name
+ * e.g., ('JAN') -> 'มกราคม'
+ */
+export function GetFullMonthName(shortName : string) : string | undefined {
+    return Months.find((month: Month) => month.name === shortName)?.thaiFullName
 }
